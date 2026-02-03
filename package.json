@@ -1,0 +1,11 @@
+{
+  "name": "networkprocessor",
+  "version": "0.0.1",
+  "dependencies": {
+    "agentlang": "*",
+    "servicenow": "git+https://github.com/agentlang-hub/servicenow.git#main"
+  },
+  "scripts": {
+    "agent": "node ./node_modules/agentlang/bin/cli.js run ."
+  }
+}
