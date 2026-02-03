@@ -80,7 +80,7 @@ flow networkOrchestrator {
     role "You are a network operations specialist handling VPN, firewall, and connectivity issues."
 }
 
-workflow @after update:servicenow/incident {
+workflow @after create:servicenow/incident {
     if ((servicenow/incident.category == "NETWORK" or servicenow/incident.ai_processor == "network") and servicenow/incident.ai_status == "in-processing") {
         {incidentInformation {
             sys_id servicenow/incident.sys_id,
